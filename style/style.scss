@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+
+//
+// Override variables
+// ----------------------
+//
+$icon-font-path: "../fonts/";
+
+// Load Bootstrap
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+
+//
+html, body{
+  height: 100%;
+}
+body{
+  padding-top: $navbar-height;
+}
+
+#main-container {
+  height: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  position: relative;
+  & > div {
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    &.critic {
+      background: rgba(255, 0, 0, 0.4);
+      top: 10%;
+      left: 10%;
+      color: #fff;
+    }
+    &.gifted {
+      background-color: rgba(64, 224, 208, 0.4);
+      top: 50%;
+      left: 50%;
+      color: #999999;
+    }
+    &.banal{
+      background-color: rgba(90, 90, 90, 0.4);
+      top: 50%;
+      left: 50%;
+      color: #fff;
+    }
+  }
+}
+
+#message{
+  position: absolute;
+  z-index: 2000;
+  bottom: 0;
+  left: 0;
+  padding-right: 0.5em;
+  width: 100%;
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  text-align: right;
+  span{
+    &.toggle{
+
+    }
+  }
+}
